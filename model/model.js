@@ -23,7 +23,7 @@ class Model {
   }
 
   onTorles(index) {
-    console.log(this.#AdatokLista[index]);
+    console.log("darabszam csokkentese");
   }
 
   getAdatokLista() {

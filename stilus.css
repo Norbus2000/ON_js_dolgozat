@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Audiowide", sans-serif;
+  background-color: black;
+}
+
+.egyelem {
+  width: 33%;
+}
+
+.elemek {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.elemek {
+  display: flex;
+}
+main,
+h1 {
+  margin: auto;
+  color: antiquewhite;
+  max-width: 1000px;
+}
+
+.egyelem {
+  padding: 20px;
+  border-style: double;
+  border-color: antiquewhite;
+  border-radius: 25px;
+  margin: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    background-color: white;
+  }
+  main,
+  h1 {
+    color: black;
+  }
+  .egyelem {
+    width: 80%;
+  }
+
+  .elemek {
+    display: flex;
+  }
+}

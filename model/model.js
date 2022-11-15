@@ -1,26 +1,40 @@
 class Model {
-    #AdatokLista;
-    #Darabszam;
-    constructor() {
-    }
-    adatLekeres(fajl, callBack) {
-      fetch(fajl, {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
+  #AdatokLista = [];
+  #Darabszam;
+  constructor() {}
+
+  adatBe(vegpont, myCallBack) {
+    fetch(vegpont, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("Success:", data);
+        this.#AdatokLista = data.konyv;
+        console.log(this.#AdatokLista);
+        myCallBack(this.#AdatokLista);
       })
-        .then((response) => response.json())
-        .then((data) => {
-          callBack(data.konyv);
-          this.#AdatokLista = data.konyv;
-        });
-    }
-    getAdatokLista() {
-      return this.#AdatokLista;
-    }
-    getDarabszam() {
-        this.#AdatokLista[length-1]
-    }
+      .catch((error) => {
+        console.error("Error:", error);
+      });
   }
-  export default KonyvModel;
+
+  onTorles(index) {
+    console.log(this.#AdatokLista[index]);
+  }
+
+  getAdatokLista() {
+    return this.#AdatokLista;
+  }
+  getDarabszam() {
+    this.#AdatokLista.forEach((elem) => {
+      console.log(elem);
+    });
+  }
+  setDarabszam() {}
+}
+
+export default Model;

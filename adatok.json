@@ -1,0 +1,25 @@
+{
+  "konyv": [
+    {
+      "id": 101,
+      "cim": "Pál utcai fiúk",
+      "szerzo": "Molnár Ferenc",
+      "ar": 1115,
+      "db": 12
+    },
+    {
+      "id": 102,
+      "cim": "A programozás rejtelmei",
+      "szerzo": "Gipsz Jakab",
+      "ar": 2000,
+      "db": 8
+    },
+    {
+      "id": 103,
+      "cim": "Az autók",
+      "szerzo": "Gipsz Balázs",
+      "ar": 4000,
+      "db": 16
+    }
+  ]
+}
